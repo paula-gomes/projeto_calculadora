@@ -1,0 +1,42 @@
+body{
+
+    margin-top: 12%;
+
+}
+
+
+#display{
+
+   display:flex;
+   justify-content:center;
+   border:solid black 1px;
+   border-radius: 10px;
+   width:140px;
+   height:35px;
+   margin: 0 auto;
+   margin-bottom: 10px;
+}
+.prototipoCalc{
+
+    display:flex;
+    justify-content: center;
+
+}
+
+.botoesNumeroTodos{
+
+    display:flex;
+    flex-wrap:wrap;
+    width:80px;
+    justify-content:space-around;
+
+}
+
+.botoesOperacoes{
+
+    
+    display:grid;
+    
+
+}
+
