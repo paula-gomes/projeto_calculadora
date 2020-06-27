@@ -16,28 +16,28 @@ let calculadora = {};
             //funçao que acrescenta numeros ao display da calculadora
             function ColocaNumDisplay(bt)
             {
-                calculadora.display.innerText += bt.innerText;
+                calculadora.display.innerText += bt.innerText;// armazena o valor no display de acordo com o botao clicado
             }
             
         
             botaoSoma.onclick = function() {
-                acumulador += calculadora.display.innerText;
-                acumulador += " + ";
-                calculadora.display.innerText = "";
+                acumulador += calculadora.display.innerText; //acumulador recebe o que está armazenado no display
+                acumulador += " + "; // insere o operador para realizar a conta
+                calculadora.display.innerText = "";// limpa o display para inserir o proximo numero
             }
             botaoSubtracao.onclick = function() {
                 acumulador += calculadora.display.innerText;
-                acumulador += " - ";
+                acumulador += " - ";// operador de subtração//
                 calculadora.display.innerText = "";
             }
             botaoMultiplicacao.onclick = function() {
                 acumulador += calculadora.display.innerText;
-                acumulador += " * ";                
+                acumulador += " * ";// operador de multiplicaçao//                
                 calculadora.display.innerText = "";
             }
             botaoDivisao.onclick = function() {
                 acumulador += calculadora.display.innerText;
-                acumulador += "/";
+                acumulador += "/";// operador de multiplicaçao//  
                 calculadora.display.innerText = "";
             }
 
@@ -57,7 +57,7 @@ let calculadora = {};
 
             }
 
-          botaoClear.onclick= function() {
-
-            calculadora.display.innerText = "";}
+            botaoClear.onclick= function() {
+                acumulador = ""
+                calculadora.display.innerText = "";} // limpa a conta anterior//
         
