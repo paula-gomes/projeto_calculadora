@@ -1,6 +1,14 @@
 body{
 
-    margin-top: 12%;
+    margin-top: 10%;
+    border:solid black 1px;
+    padding: 8px;
+    width: 300px;
+    height: 200px;
+    margin-left: 35%;
+    border-radius: 10px;
+    
+    
 
 }
 
@@ -11,15 +19,15 @@ body{
    justify-content:center;
    border:solid black 1px;
    border-radius: 10px;
-   width:140px;
-   height:35px;
+   width:270px;
+   height:40px;
    margin: 0 auto;
    margin-bottom: 10px;
 }
 .prototipoCalc{
 
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
 
 }
 
