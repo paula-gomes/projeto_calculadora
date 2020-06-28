@@ -1,17 +1,17 @@
 let calculadora = {};
             calculadora.display = document.querySelector("#display"); 
-            let botoes = document.querySelectorAll(".botoesNum"); // seleciona todos os botoes de numero      
-            let botaoSoma = document.querySelector("#soma");
-            let botaoIgual = document.querySelector("#igual");
-            let botaoSubtracao= document.querySelector("#subtracao");
-            let botaoMultiplicacao= document.querySelector("#multiplicacao");
-            let botaoDivisao= document.querySelector("#divisao");
-            let botaoClear = document.querySelector("#clear");
+            calculadora.botoes = document.querySelectorAll(".botoesNum"); // seleciona todos os botoes de numero      
+            calculadora.botaoSoma = document.querySelector("#soma");
+            calculadora. botaoIgual = document.querySelector("#igual");
+            calculadora.botaoSubtracao= document.querySelector("#subtracao");
+            calculadora.botaoMultiplicacao= document.querySelector("#multiplicacao");
+            calculadora.botaoDivisao= document.querySelector("#divisao");
+            calculadora.botaoClear = document.querySelector("#clear");
             let acumulador = "";
             
 
             //para cada botao do array de botoes irá adicionar um evento de click , o qual executa a funçao de add no display
-            botoes.forEach(function(button){ button.addEventListener("click", function(){ColocaNumDisplay(button)})});
+            calculadora.botoes.forEach(function(button){ button.addEventListener("click", function(){ColocaNumDisplay(button)})});
             
             //funçao que acrescenta numeros ao display da calculadora
             function ColocaNumDisplay(bt)
@@ -20,29 +20,29 @@ let calculadora = {};
             }
             
         
-            botaoSoma.onclick = function() {
+            calculadora.botaoSoma.onclick = function() {
                 acumulador += calculadora.display.innerText; //acumulador recebe o que está armazenado no display
                 acumulador += " + "; // insere o operador para realizar a conta
                 calculadora.display.innerText = "";// limpa o display para inserir o proximo numero
             }
-            botaoSubtracao.onclick = function() {
+            calculadora.botaoSubtracao.onclick = function() {
                 acumulador += calculadora.display.innerText;
                 acumulador += " - ";// operador de subtração//
                 calculadora.display.innerText = "";
             }
-            botaoMultiplicacao.onclick = function() {
+            calculadora.botaoMultiplicacao.onclick = function() {
                 acumulador += calculadora.display.innerText;
                 acumulador += " * ";// operador de multiplicaçao//                
                 calculadora.display.innerText = "";
             }
-            botaoDivisao.onclick = function() {
+            calculadora.botaoDivisao.onclick = function() {
                 acumulador += calculadora.display.innerText;
                 acumulador += "/";// operador de multiplicaçao//  
                 calculadora.display.innerText = "";
             }
 
 
-            botaoIgual.onclick = function() {
+            calculadora.botaoIgual.onclick = function() {
                 //TODO: checar se existe conteúdo dentro do display
 
                 //colocando conteúdo do display no acumulador
@@ -57,7 +57,7 @@ let calculadora = {};
 
             }
 
-            botaoClear.onclick= function() {
+            calculadora.botaoClear.onclick= function() {
                 acumulador = ""
                 calculadora.display.innerText = "";} // limpa a conta anterior//
         
