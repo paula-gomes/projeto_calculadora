@@ -1,5 +1,5 @@
-body{
-
+.container{
+    
     margin-top: 10%;
     border:solid black 1px;
     padding: 8px;
@@ -7,9 +7,8 @@ body{
     height: 200px;
     margin-left: 35%;
     border-radius: 10px;
+    background-color:#17706e;
     
-    
-
 }
 
 
@@ -23,28 +22,49 @@ body{
    height:40px;
    margin: 0 auto;
    margin-bottom: 10px;
+   background-color:#f7eb09;
 }
 .prototipoCalc{
-
     display:flex;
     justify-content: space-around;
-
+    
 }
 
 .botoesNumeroTodos{
-
     display:flex;
-    flex-wrap:wrap;
-    width:80px;
+    flex-wrap:wrap;    
     justify-content:space-around;
-
+}
+.botoesNum{
+    width: 30%;
+    padding: 4px;
+    background-color:#01d28e;
+    border-radius: 10px;
+    font-family: helvetica;
+    font-weight: bold;
+    
 }
 
 .botoesOperacoes{
-
-    
+   
     display:grid;
+   
+}
+.botoesOp{
+    background-color:#f7f7ee;
+    border-radius: 10px;
+    font-family: helvetica;
+    font-weight: bold;
     
+}
 
+#clear{
+
+    border-radius: 5px;
+    padding:5px;
+    background-color:#fb7813;
+    font-family: helvetica;
+    font-weight: bold;
+    color:white;
 }
 
