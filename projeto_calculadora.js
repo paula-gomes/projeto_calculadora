@@ -14,19 +14,13 @@ let calculadora = {};
             //para cada botao do array de botoes irá adicionar um evento de click , o qual executa a funçao de add no display
             
             calculadora.botoes.forEach(function (button){ button.addEventListener("click", function (){
-                
+                //só executa o evento para um numero que possua menos de 20 caracteres//
+                if(calculadora.display.textContent.length <17) 
                 ColocaNumDisplay(button); 
-                
-                if(calculadora.display.textContent.length> 10) {  // se o numero tiver mais de 10 caracteres
-                    
-                    this.removeEventListener('click',arguments.callee);    // remover o evento            
-                    // so retira um botao , como invalidar todos?
-                    
-                };
-
-                
+                                
             })});
-            //funçao que acrescenta numeros ao display da calculadora
+
+            //funçao que acrescenta numeros ao display da calculadora//
             function ColocaNumDisplay(bt)
             {                
                 console.log(count);
@@ -78,6 +72,6 @@ let calculadora = {};
                 calculadora.display.innerText= "";} // limpa a conta anterior//
         
 
-        // corrigindo o "vazamento do display"
+      
 
      
