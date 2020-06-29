@@ -1,29 +1,40 @@
+body{
+    
+    background-color:coral;
+
+}
 .container{
     
     margin-top: 10%;
-    border:solid black 1px;
+    border: solid black 1px;
     padding: 8px;
-    width: 300px;
-    height: 200px;
+    width: 320px;
+    height: 250px;
     margin-left: 35%;
     border-radius: 10px;
-    background-color:#17706e;
-    
+    background-color: #17706e
 }
 
 
 #display{
 
-   display:flex;
-   justify-content:center;
-   border:solid black 1px;
-   border-radius: 10px;
-   width:270px;
-   height:40px;
-   margin: 0 auto;
-   margin-bottom: 10px;
-   background-color:#f7eb09;
+display: flex;
+    justify-content: center;
+    border: solid black 1px;
+    border-radius: 10px;
+    width: 270px;
+    height: 60px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: #f7eb09;
+    font-family: helvetica;
+    font-weight: bold;
+    align-items: center;
+    font-size: larger;
 }
+   
+   
+
 .prototipoCalc{
     display:flex;
     justify-content: space-around;
@@ -34,14 +45,16 @@
     display:flex;
     flex-wrap:wrap;    
     justify-content:space-around;
+    padding:5px;
 }
 .botoesNum{
-    width: 30%;
+    width: 67px;
     padding: 4px;
     background-color:#01d28e;
-    border-radius: 10px;
-    font-family: helvetica;
+    border-radius: 15px;
     font-weight: bold;
+    font-family: helvetica;
+    font-size:larger;
     
 }
 
@@ -55,6 +68,8 @@
     border-radius: 10px;
     font-family: helvetica;
     font-weight: bold;
+    font-size:larger;
+    width:55px;
     
 }
 
@@ -68,3 +83,28 @@
     color:white;
 }
 
+@media(max-width: 768px)
+{
+    .container{
+        
+        margin: 0 auto;
+        height: 400px;
+        margin-top: 100px;
+        width: 280px;
+    }
+    #display{
+        width: 250px;
+        height: 80px;
+        font-size: x-large;
+    }
+    .prototipoCalc {
+        height: 300px;
+    }
+
+    .botoesOp{
+        width: 50px;
+    }
+
+    
+
+}
