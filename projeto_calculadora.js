@@ -2,22 +2,38 @@ let calculadora = {};
             calculadora.display = document.querySelector("#display"); 
             calculadora.botoes = document.querySelectorAll(".botoesNum"); // seleciona todos os botoes de numero      
             calculadora.botaoSoma = document.querySelector("#soma");
-            calculadora. botaoIgual = document.querySelector("#igual");
+            calculadora.botaoIgual = document.querySelector("#igual");
             calculadora.botaoSubtracao= document.querySelector("#subtracao");
             calculadora.botaoMultiplicacao= document.querySelector("#multiplicacao");
             calculadora.botaoDivisao= document.querySelector("#divisao");
             calculadora.botaoClear = document.querySelector("#clear");
             let acumulador = "";
+            let count=0;
             
 
             //para cada botao do array de botoes irá adicionar um evento de click , o qual executa a funçao de add no display
-            calculadora.botoes.forEach(function(button){ button.addEventListener("click", function(){ColocaNumDisplay(button)})});
             
+            calculadora.botoes.forEach(function (button){ button.addEventListener("click", function (){
+                
+                ColocaNumDisplay(button); 
+                
+                if(calculadora.display.textContent.length> 10) {  // se o numero tiver mais de 10 caracteres
+                    
+                    this.removeEventListener('click',arguments.callee);    // remover o evento            
+                    // so retira um botao , como invalidar todos?
+                    
+                };
+
+                
+            })});
             //funçao que acrescenta numeros ao display da calculadora
             function ColocaNumDisplay(bt)
-            {
+            {                
+                console.log(count);
                 calculadora.display.innerText += bt.innerText;// armazena o valor no display de acordo com o botao clicado
+               
             }
+
             
         
             calculadora.botaoSoma.onclick = function() {
@@ -59,5 +75,9 @@ let calculadora = {};
 
             calculadora.botaoClear.onclick= function() {
                 acumulador = ""
-                calculadora.display.innerText = "";} // limpa a conta anterior//
+                calculadora.display.innerText= "";} // limpa a conta anterior//
         
+
+        // corrigindo o "vazamento do display"
+
+     
